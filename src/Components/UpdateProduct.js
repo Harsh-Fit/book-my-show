@@ -17,7 +17,12 @@ function UpdateProduct() {
 
   const getProductDetail = async () => {
     // console.log(params);
-    let result = await fetch(`http://localhost:5000/products/${params.id}`);
+    let result = await fetch(`http://localhost:5000/products/${params.id}`, {
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
+      },
+    });
     result = await result.json();
     // console.warn(result);
     setCompany(result.company);
@@ -38,6 +43,7 @@ function UpdateProduct() {
       }),
       headers: {
         "Content-Type": "application/json",
+        authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
       },
     });
     result = await result.json();
