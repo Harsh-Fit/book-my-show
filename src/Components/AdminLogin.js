@@ -1,28 +1,22 @@
 import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
-import ReCAPTCHA from "react-google-recaptcha";
 
-function Login() {
+function AdminLogin() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [verified, setVerified] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const auth = localStorage.getItem("user");
-    if (auth) {
-      navigate("/");
-    }
-  });
-
-  const onChange = () => {
-    setVerified(true);
-  };
+  //   useEffect(() => {
+  //     const auth = localStorage.getItem("user");
+  //     if (auth) {
+  //       navigate("/admin-panel");
+  //     }
+  //   });
 
   const loginHandle = async () => {
     // console.log("Email", email, "Password", password);
-    let result = await fetch("http://localhost:5000/login", {
+    let result = await fetch("http://localhost:5000/admin-login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: {
@@ -34,8 +28,7 @@ function Login() {
     if (result.auth) {
       localStorage.setItem("user", JSON.stringify(result.user));
       localStorage.setItem("token", JSON.stringify(result.auth));
-      alert(`Welcome to BookMyShow.. .`);
-      navigate("/");
+      navigate("/admin-panel");
     } else {
       alert("Invalid Credentials !!! Try again with correct credentials ...");
     }
@@ -43,7 +36,7 @@ function Login() {
 
   return (
     <div className="inputContainer">
-      <h1>USER LOGIN</h1>
+      <h1 style={{ color: "red" }}>ADMIN LOGIN</h1>
       <form>
         <label>
           <h6> EMAIL : </h6>
@@ -69,21 +62,12 @@ function Login() {
           }}
         />
         <br />
-        <ReCAPTCHA
-          sitekey="6LcnHRElAAAAAOxr56xxt065kDbhBIv-s6QUAdjk"
-          onChange={onChange}
-        />
-        <br />
-        <Button
-          variant="primary"
-          onClick={() => loginHandle()}
-          disabled={!verified}
-        >
-          Login
+        <Button variant="primary" onClick={loginHandle}>
+          Admin Login
         </Button>
       </form>
     </div>
   );
 }
 
-export default Login;
+export default AdminLogin;

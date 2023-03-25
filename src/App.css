@@ -52,12 +52,14 @@ input {
 
 table {
   margin: 20px auto;
-  width: 75%;
+  width: 95%;
+  text-align: center;
 }
 
 table tr td {
   border: 2px solid black;
   padding: 10px;
+  text-align: center;
 }
 
 .searchbox {
@@ -67,4 +69,250 @@ table tr td {
   background-color: rgb(181, 225, 243);
   padding: 5px;
   border-radius: 5px;
+}
+
+.cartStyle {
+  width: 45px;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.cartItemNo {
+  color: white;
+  background-color: red;
+  padding: 4px 10px;
+  border-radius: 15px;
+  position: relative;
+  top: -12px;
+  left: -20px;
+}
+
+.homeLinkStyle {
+  color: rgba(0, 0, 0, 0.815);
+  text-decoration: none;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.d-flex {
+  align-items: center;
+  margin-left: 20px;
+}
+
+.card-img,
+.card-img-bottom,
+.card-img-top {
+  width: 100%;
+  height: 350px;
+}
+
+.headingStyle {
+  margin: 20px auto;
+  text-align: center;
+  color: brown;
+}
+
+.formStyle {
+  display: flex;
+  background-color: antiquewhite;
+  width: 60%;
+  margin: 20px auto;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.formbox {
+  padding: 20px;
+}
+
+select {
+  width: 80%;
+  float: right;
+}
+
+.coupon {
+  width: 80%;
+  float: right;
+}
+
+.priceBtn {
+  width: 30%;
+  margin: 20px auto;
+  float: right;
+}
+
+option {
+  margin: auto;
+  text-align: center;
+}
+
+.seat {
+  width: 100%;
+  background-color: black;
+}
+.seatArrange {
+  width: 65%;
+  border: 4px solid black;
+  border-radius: 10px;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.775);
+}
+
+.grid-container {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  background-color: rgba(255, 0, 0, 0.514);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.diamond {
+  background-color: rgba(255, 0, 0, 0.514);
+  margin: 0px 10px;
+  border-radius: 5px;
+  padding: 4px 0px;
+}
+
+/* .btn-active {
+  background-color: black;
+  color: red;
+} */
+
+/* .grid-item:disabled {
+  background-color: rgb(0, 0, 0);
+} */
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid-container2 {
+  display: grid;
+  column-gap: 20px;
+  row-gap: 20px;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  background-color: rgba(0, 128, 0, 0.518);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.platinum {
+  background-color: rgba(0, 128, 0, 0.518);
+  margin: 0px 10px;
+  border-radius: 5px;
+  padding: 4px 0px;
+}
+
+.grid-item2 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid-container3 {
+  display: grid;
+  column-gap: 20px;
+  row-gap: 20px;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  background-color: rgba(0, 0, 255, 0.515);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.gold {
+  background-color: rgba(0, 0, 255, 0.515);
+  margin: 0px 10px;
+  border-radius: 5px;
+  padding: 4px 0px;
+}
+
+.grid-item3 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid-container4 {
+  display: grid;
+  column-gap: 20px;
+  row-gap: 20px;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  background-color: rgba(255, 255, 0, 0.515);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.silver {
+  background-color: rgba(255, 255, 0, 0.515);
+  margin: 0px 10px;
+  border-radius: 5px;
+  padding: 4px 0px;
+}
+
+.grid-item4 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.screen {
+  text-align: center;
+  border: 2px solid black;
+  width: 85%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 242, 0);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+.pay {
+  display: flex;
+  margin: 20px auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.book {
+  position: absolute;
+  left: 70%;
+  top: 50px;
+  z-index: 1;
+  rotate: 18deg;
+  opacity: 0.5;
 }

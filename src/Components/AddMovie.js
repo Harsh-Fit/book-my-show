@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
 
-function AddProduct() {
+function AddMovie() {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
@@ -106,4 +106,4 @@ function AddProduct() {
   );
 }
 
-export default AddProduct;
+export default AddMovie;
