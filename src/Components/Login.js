@@ -6,7 +6,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 function Login() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [verified, setVerified] = useState(false);
+  // const [verified, setVerified] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -16,9 +16,9 @@ function Login() {
     }
   });
 
-  const onChange = () => {
-    setVerified(true);
-  };
+  // const onChange = () => {
+  //   setVerified(true);
+  // };
 
   const loginHandle = async () => {
     // console.log("Email", email, "Password", password);
@@ -69,15 +69,15 @@ function Login() {
           }}
         />
         <br />
-        <ReCAPTCHA
+        {/* <ReCAPTCHA
           sitekey="6LcnHRElAAAAAOxr56xxt065kDbhBIv-s6QUAdjk"
           onChange={onChange}
-        />
+        /> */}
         <br />
         <Button
           variant="primary"
           onClick={() => loginHandle()}
-          disabled={!verified}
+          // disabled={!verified}
         >
           Login
         </Button>
